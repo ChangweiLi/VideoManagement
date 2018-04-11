@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+
+<TableView fx:id="tv_videoInfo" prefHeight="768" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="scau.controller.VideoInfoTableViewController">
+  <columns>
+      <TableColumn fx:id="tc_name" prefWidth="100.0" text="name" />
+      <TableColumn fx:id="tc_author" prefWidth="100.0" text="author" />
+      <TableColumn fx:id="tc_createTime" prefWidth="150.0" text="createTime" />
+      <TableColumn fx:id="tc_uploadTime" prefWidth="150.0" text="uploadTime" />
+      <TableColumn fx:id="tc_path" prefWidth="200.0" text="path" />
+      <TableColumn fx:id="tc_size" prefWidth="100.0" text="size" />
+      <TableColumn fx:id="tc_type" prefWidth="100.0" text="type" />
+  </columns>
+</TableView>
