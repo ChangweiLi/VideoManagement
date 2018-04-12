@@ -8,4 +8,5 @@ package scau.service;
  * Description: No Description
  */
 public class ReceiveVideo {
+
 }

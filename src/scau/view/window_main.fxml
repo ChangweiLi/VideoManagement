@@ -1,32 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="scau.controller.WindowMain"
-            prefHeight="400.0" prefWidth="600.0">
-    <MenuBar fx:id="menuBar" onKeyPressed="#handleKeyInput" >
-        <menus>
-            <Menu text="File">
-               <items>
-                   <MenuItem text="Open"></MenuItem>
-               </items>
-            </Menu>
-            <Menu text="Receive">
-
-            </Menu>
-            <Menu text="help">
-
-            </Menu>
-            <Menu text="Connection..">
-
-            </Menu>
-        </menus>
-    </MenuBar>
-
+<AnchorPane maxHeight="800" maxWidth="1300" minHeight="800" minWidth="1300" prefHeight="800" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scau.controller.WindowMain">
+   <!-- 主窗口的菜单栏 -->
+    <VBox fx:id="vb_menuBar" prefHeight="50" prefWidth="1300">
+       <MenuBar fx:id="menuBar" minWidth="1300" onKeyPressed="#handleKeyInput">
+           <menus>
+               <Menu text="File">
+                   <items>
+                       <MenuItem text="Open" />
+                       <MenuItem text="Save" />
+                       <MenuItem text="Save As" />
+                       <MenuItem text="Connect .."/>
+                       <MenuItem text="Setting" />
+                       <MenuItem text="Exit" />
+                   </items>
+               </Menu>
+               <Menu text="Receive">
+                   <items>
+                       <MenuItem text="Receive history" />
+                       <MenuItem text="Current Task" />
+                   </items>
+               </Menu>
+               <Menu text="help">
+                   <items>
+                       <MenuItem text="Help" />
+                       <MenuItem text="Check for Updates"/>
+                       <MenuItem text="About.." />
+                   </items>
+               </Menu>
+               <Menu text="Connect..">
+                    <items>
+                        <MenuItem text="Connect.." />
+                        <MenuItem text="DisConnect.." />
+                    </items>
+               </Menu>
+           </menus>
+       </MenuBar>
+   </VBox>
+    <!-- 主窗口工具栏 可以用于查询，搜索等等-->
+    <AnchorPane layoutX="0" layoutY="26">
+        <fx:include source="pane_toolsBar.fxml"/>
+    </AnchorPane>
+    <!-- 主窗口表格 展示视频信息 -->
+    <AnchorPane layoutX="0" layoutY="56">
+        <fx:include source="tableview_videoinfo.fxml" />
+    </AnchorPane>
 </AnchorPane>
