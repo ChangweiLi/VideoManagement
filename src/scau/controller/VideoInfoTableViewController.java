@@ -1,11 +1,15 @@
 package scau.controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import scau.model.VideoInfo;
 
-public class VideoInfoTableViewController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class VideoInfoTableViewController implements Initializable{
     @FXML
     private TableView<VideoInfo> videoInfoTableView;
     @FXML
@@ -24,4 +28,8 @@ public class VideoInfoTableViewController {
     private TableColumn<VideoInfo,String>  tc_type;
 
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
 }

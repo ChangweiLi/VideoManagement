@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
+<?import javafx.scene.control.SeparatorMenuItem?>
 <AnchorPane maxHeight="800" maxWidth="1300" minHeight="800" minWidth="1300" prefHeight="800" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scau.controller.WindowMain">
    <!-- 主窗口的菜单栏 -->
     <VBox fx:id="vb_menuBar" prefHeight="50" prefWidth="1300">
@@ -13,12 +14,14 @@
            <menus>
                <Menu text="File">
                    <items>
-                       <MenuItem text="Open" />
-                       <MenuItem text="Save" />
-                       <MenuItem text="Save As" />
-                       <MenuItem text="Connect .."/>
-                       <MenuItem text="Setting" />
-                       <MenuItem text="Exit" />
+                       <MenuItem text="Open" onAction="#clickOpen"/>
+                       <MenuItem text="Save" onAction="#clickSave"/>
+                       <MenuItem text="Save As" onAction="#clickSaveAs"/>
+                       <MenuItem text="Connect .." onAction="#clickConnect"/>
+                       <SeparatorMenuItem  />
+                       <MenuItem text="Setting" onAction="#clickSetting"/>
+                       <SeparatorMenuItem  />
+                       <MenuItem text="Exit" onAction="#clickExit" />
                    </items>
                </Menu>
                <Menu text="Receive">
@@ -31,12 +34,14 @@
                    <items>
                        <MenuItem text="Help" />
                        <MenuItem text="Check for Updates"/>
+                       <SeparatorMenuItem  />
                        <MenuItem text="About.." />
                    </items>
                </Menu>
                <Menu text="Connect..">
                     <items>
                         <MenuItem text="Connect.." />
+                        <SeparatorMenuItem  />
                         <MenuItem text="DisConnect.." />
                     </items>
                </Menu>

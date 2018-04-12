@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="35.0" maxWidth="1300" minHeight="35.0" minWidth="1300" prefHeight="35.0" prefWidth="1300" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scau.controller.ToolsBarController">
      <Label layoutX="9.0" layoutY="3.0" text=" name : " textAlignment="CENTER">
       <font>
@@ -17,13 +16,18 @@
          <Insets />
       </opaqueInsets>
    </Label>
-   <TextField layoutX="70.0" layoutY="1.0" maxWidth="76.0" minHeight="25.0" minWidth="50.0" opacity="0.95" prefHeight="25.0" prefWidth="76.0" />
+   <TextField fx:id="nameTextField" layoutX="70.0" layoutY="4.0" maxWidth="76.0" minHeight="25.0" minWidth="50.0" onInputMethodTextChanged="#TextChanged" opacity="0.95" prefHeight="25.0" prefWidth="76.0" promptText="请输入字符">
+      <font>
+         <Font size="10.0" />
+      </font></TextField>
    <Label layoutX="178.0" layoutY="3.0" text="author :" textAlignment="CENTER">
       <font>
          <Font size="13.0" />
       </font>
    </Label>
-   <TextField layoutX="245.0" layoutY="1.0" maxWidth="76.0" minHeight="25.0" minWidth="50.0" opacity="0.95" prefHeight="25.0" prefWidth="76.0" />
-   <Button layoutX="333.0" layoutY="1.0" mnemonicParsing="false" text="Search" textFill="#322c2c" />
-
+   <TextField fx:id="authorTextField" layoutX="245.0" layoutY="4.0" maxWidth="76.0" minHeight="25.0" minWidth="50.0" onInputMethodTextChanged="#authorInputText" opacity="0.95" prefHeight="25.0" prefWidth="76.0" promptText="请输入作者">
+      <font>
+         <Font size="10.0" />
+      </font></TextField>
+   <Button fx:id="searchButton" layoutX="333.0" layoutY="1.0" mnemonicParsing="false" onAction="#clickSearch" text="Search" textFill="#322c2c" />
 </AnchorPane>
