@@ -3,8 +3,11 @@ package scau.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.input.InputMethodEvent;
+
+import java.util.Date;
 
 /**
  * Created with IntelliJ IDEA
@@ -19,11 +22,18 @@ public class ToolsBarController {
     @FXML
     private TextField authorTextField;
     @FXML
+    private DatePicker dp_createTime;
+    @FXML
+    private DatePicker dp_uploadTime;
+    @FXML
     private Button   searchButton;
 
     private String name;
     private String author;
+    private String   createTime;
+    private Date   uploadTime;
 
+//    Date   uploadTime;
     @FXML
     public void TextChanged(InputMethodEvent inputMethodEvent) {
     }
@@ -37,9 +47,10 @@ public class ToolsBarController {
         System.out.println("你点击了搜索按钮");
         name = nameTextField.getText();
         author = authorTextField.getText();
+//        createTime = dp_createTime.getEditor().toString();
         if(name == "" && author == ""){
             System.out.println("请你输入name和author");
         }
-        System.out.println("文本框中输入了：name"+name +"author" +author);
+        System.out.println("文本框中输入了name: "+name +"  author: " +author + "create time" + createTime);
     }
 }

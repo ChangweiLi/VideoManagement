@@ -49,11 +49,11 @@
        </MenuBar>
    </VBox>
     <!-- 主窗口工具栏 可以用于查询，搜索等等-->
-    <AnchorPane layoutX="0" layoutY="26">
+    <AnchorPane layoutX="0" layoutY="27" minHeight="50">
         <fx:include source="pane_toolsBar.fxml"/>
     </AnchorPane>
     <!-- 主窗口表格 展示视频信息 -->
-    <AnchorPane layoutX="0" layoutY="56">
+    <AnchorPane layoutX="0" layoutY="76">
         <fx:include source="tableview_videoinfo.fxml" />
     </AnchorPane>
 </AnchorPane>
