@@ -7,5 +7,6 @@ package scau.controller;
  * Time: 19:23
  * Description: No Description
  */
-public class AboutmeController {
+public class AboutMeController {
+
 }

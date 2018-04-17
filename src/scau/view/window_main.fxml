@@ -35,7 +35,7 @@
                        <MenuItem text="Help" />
                        <MenuItem text="Check for Updates"/>
                        <SeparatorMenuItem  />
-                       <MenuItem text="About.." />
+                       <MenuItem text="About.."  onAction="#clickAbout"/>
                    </items>
                </Menu>
                <Menu text="Connect..">
