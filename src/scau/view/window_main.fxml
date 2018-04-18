@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.SeparatorMenuItem?>
-<AnchorPane maxHeight="800" maxWidth="1300" minHeight="800" minWidth="1300" prefHeight="800" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scau.controller.WindowMain">
+<AnchorPane maxHeight="800" maxWidth="1300" minHeight="800" minWidth="1300" prefHeight="800" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scau.controller.WindowMainController">
    <!-- 主窗口的菜单栏 -->
     <VBox fx:id="vb_menuBar" prefHeight="50" prefWidth="1300">
        <MenuBar fx:id="menuBar" minWidth="1300" onKeyPressed="#handleKeyInput">
@@ -26,21 +26,21 @@
                </Menu>
                <Menu text="Receive">
                    <items>
-                       <MenuItem text="Receive history" />
-                       <MenuItem text="Current Task" />
+                       <MenuItem text="Receive history" onAction="#clickReceiveHistory"/>
+                       <MenuItem text="Current Task"  onAction="#clickCurrentTask"/>
                    </items>
                </Menu>
                <Menu text="help">
                    <items>
-                       <MenuItem text="Help" />
-                       <MenuItem text="Check for Updates"/>
+                       <MenuItem text="Help" onAction="#clickHelp"/>
+                       <MenuItem text="Check for Updates" onAction="#clickCheck"/>
                        <SeparatorMenuItem  />
                        <MenuItem text="About.."  onAction="#clickAbout"/>
                    </items>
                </Menu>
                <Menu text="Connect..">
                     <items>
-                        <MenuItem text="Connect.." />
+                        <MenuItem text="Connect.." onAction="#clickConnect"/>
                         <SeparatorMenuItem  />
                         <MenuItem text="DisConnect.." />
                     </items>
@@ -54,6 +54,6 @@
     </AnchorPane>
     <!-- 主窗口表格 展示视频信息 -->
     <AnchorPane layoutX="0" layoutY="76">
-        <fx:include source="tableview_videoinfo.fxml" />
+        <fx:include source="tableview_videoInfo.fxml" />
     </AnchorPane>
 </AnchorPane>

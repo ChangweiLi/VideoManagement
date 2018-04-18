@@ -1,6 +1,7 @@
 package scau.model;
 
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 /**
  * Created with IntelliJ IDEA
@@ -11,83 +12,63 @@ import javafx.beans.property.SimpleStringProperty;
  */
 public class VideoInfo {
     /* 视频的名称 */
-    private  SimpleStringProperty name;
+    private  StringProperty name;
     /* 视频的上传作者*/
-    private  SimpleStringProperty author;
+    private  StringProperty author;
     /* 视频的创建时间 */
-    private  SimpleStringProperty createTime;
+    private  StringProperty createTime;
     /* 视频的上传时间 */
-    private  SimpleStringProperty uploadTime;
+    private  StringProperty uploadTime;
     /* 视频的路径 */
-    private  SimpleStringProperty path;
+    private  StringProperty path;
     /* 视频的大小 */
-    private  SimpleStringProperty size;
+    private  StringProperty size;
     /* 视频文件的格式 */
-    private  SimpleStringProperty type;
+    private  StringProperty type;
 
-    public VideoInfo(String name,String author,String createtime,String uploadTime,String path,String size,String type) {
-        this.name = new SimpleStringProperty(name);
-        this.author = new SimpleStringProperty(author);
-        this.createTime = new SimpleStringProperty(createtime);
-        this.uploadTime = new SimpleStringProperty(uploadTime);
-        this.path = new SimpleStringProperty(path);
-        this.size = new SimpleStringProperty(size);
-        this.type = new SimpleStringProperty(type);
+    public VideoInfo(StringProperty name, StringProperty author, StringProperty createTime, StringProperty uploadTime, StringProperty path, StringProperty size, StringProperty type) {
+        this.name = name;
+        this.author = author;
+        this.createTime = createTime;
+        this.uploadTime = uploadTime;
+        this.path = path;
+        this.size = size;
+        this.type = type;
     }
-
-    public SimpleStringProperty getName() {
+  /*  name */
+    public void setName(String value){
+        nameProperty().setValue(value);
+    }
+    public String getName(){
+        return nameProperty().get();
+    }
+    public StringProperty nameProperty() {
+        if(name == null) name = new SimpleStringProperty(this,"name");
         return name;
     }
 
-    public void setName(String name) {
-        this.name.set(name);
+/*   author */
+     public void setAuthor(String value){
+          authorProperty().setValue(value);
+      }
+    public String getAuthor(){
+        return authorProperty().get();
     }
-
-    public SimpleStringProperty getAuthor() {
+    public StringProperty authorProperty() {
+        if(author == null) author = new SimpleStringProperty(this,"author");
         return author;
     }
 
-    public void setAuthor(String author) {
-        this.author.set(author);
-    }
+/*    createTime */
 
-    public SimpleStringProperty getCreateTime() {
-        return createTime;
-    }
+/*   uploadTime*/
 
-    public void setCreateTime(String createTime) {
-        this.createTime.set(createTime);
-    }
 
-    public SimpleStringProperty getUploadTime() {
-        return uploadTime;
-    }
+/*   path */
 
-    public void setUploadTime(String uploadTime) {
-        this.uploadTime.set(uploadTime);
-    }
+/*   size  */
 
-    public SimpleStringProperty getPath() {
-        return path;
-    }
+/*   type  */
 
-    public void setPath(String path) {
-        this.path.set(path);
-    }
 
-    public SimpleStringProperty getSize() {
-        return size;
-    }
-
-    public void setSize(String size) {
-        this.size.set(size);
-    }
-
-    public SimpleStringProperty getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type.set(type);
-    }
 }
