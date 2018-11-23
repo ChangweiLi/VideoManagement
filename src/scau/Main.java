@@ -13,6 +13,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("view/window_main.fxml"));
         primaryStage.setTitle("Video File Management System V 1.0.0");
         primaryStage.setScene(new Scene(root, 1300,800));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
