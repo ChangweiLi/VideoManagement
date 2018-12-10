@@ -5,8 +5,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import scau.service.PCSocketServer;
+
+import java.io.IOException;
 
 public class Main extends Application {
+
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -16,7 +20,11 @@ public class Main extends Application {
         primaryStage.setResizable(false);
         primaryStage.show();
     }
-
+    //初始化ServerSocket单例，整个系统只存在一个实例
+    static {
+            PCSocketServer pcSocketServer = PCSocketServer.getInstance();
+            System.out.println("static 初始化之后 "+pcSocketServer.toString());
+    }
 
     public static void main(String[] args) {
         launch(args);

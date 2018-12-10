@@ -8,4 +8,5 @@ package scau.controller;
  * Description: No Description
  */
 public class MediaPlayController {
+
 }

@@ -11,6 +11,7 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import scau.service.PCSocketServer;
 import scau.utils.InitVideoData;
 
 import java.awt.*;
@@ -28,6 +29,7 @@ import java.util.ResourceBundle;
  * Description: No Description
  */
 public class WindowMainController implements Initializable{
+
     @FXML
     private MenuBar menuBar;
 
@@ -68,8 +70,10 @@ public class WindowMainController implements Initializable{
 
     @FXML
     public void clickConnect(ActionEvent event) {
+//        自动获取IP地址刷新UI界面
         loadFxmlShowStage("dialog_connection.fxml");
     }
+
 
     @FXML
     public void clickSetting(ActionEvent event) {
@@ -102,7 +106,8 @@ public class WindowMainController implements Initializable{
         } catch (IOException e) {
             e.printStackTrace();
     }
-        stage1.setTitle("Task");
+        stage1.setTitle("Start Service");
+        stage1.setResizable(false);
         stage1.setScene(new Scene( root));
         stage1.show();
     }
