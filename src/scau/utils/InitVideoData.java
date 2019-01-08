@@ -21,7 +21,7 @@ import java.util.logging.Logger;
  */
 public class InitVideoData {
 
-     public static final Logger log = Logger.getLogger(InitVideoData.class.getName());
+     public static final Logger LOG = Logger.getLogger(InitVideoData.class.getName());
      /* 存放的视频文件*/
      private Files videoFiles;
      /* 存放的视频路径根目录 */
@@ -65,7 +65,7 @@ public class InitVideoData {
 //        finally {
 //            log.info("init finally");
 //        }
-        log.info("init");
+        LOG.info("表格数据初始化完成");
 
     }
 }

@@ -72,6 +72,8 @@ public class WindowMainController implements Initializable{
     public void clickConnect(ActionEvent event) {
 //        自动获取IP地址刷新UI界面
         loadFxmlShowStage("dialog_connection.fxml");
+//        ConnectController d = new ConnectController();
+
     }
 
 

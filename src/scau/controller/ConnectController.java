@@ -1,9 +1,20 @@
 package scau.controller;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
+import scau.service.FileServer;
 import scau.service.PCSocketServer;
+import scau.service.StartService;
+
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.URL;
+import java.net.UnknownHostException;
+import java.util.ResourceBundle;
+import java.util.logging.Logger;
 
 
 /**
@@ -13,20 +24,35 @@ import scau.service.PCSocketServer;
  * Time: 19:23
  * Description: this is Controller level, start ServerSocket Service.
  */
-public class ConnectController {
+public class ConnectController implements Initializable{
+    private static final Logger LOG = Logger.getLogger(ConnectController.class.getName());
 
     @FXML
-    private TextField nameTextField;
+    private TextField ipTextField ;
+
+    @FXML
+    private TextField portTextField;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        try {
+            ipTextField.setText(InetAddress.getLocalHost().getHostAddress());
+            portTextField.setText("8899");
+            LOG.info("默认ip为：" +InetAddress.getLocalHost().getHostAddress());
+        } catch (UnknownHostException e) {
+            LOG.info("获取ip地址失败");
+            e.printStackTrace();
+        }
+    }
+
 
     @FXML
     public void clickStartService(ActionEvent event) {
 
-        PCSocketServer pcSocketServer = PCSocketServer.getInstance();
-        System.out.println("pcSocket String is " + pcSocketServer.toString());
+           int port;
+//        port = (int) portTextField.getText();
 
-//        此处的端口由用户自己设置代码自动获取
-//        监听接收服务
-//        pcSocketServer.startServer("gagag/jps");
-//        System.out.println("this is ConnectController"+pcSocketServer);
     }
+
+
 }
