@@ -3,7 +3,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 
-<TableView fx:id="tv_videoInfo" prefHeight="750" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+<TableView fx:id="videoInfoTableView" prefHeight="750" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
            fx:controller="scau.controller.VideoInfoTableViewController">
   <columns>
       <TableColumn fx:id="tc_name" prefWidth="100.0" text="name" minWidth="100"  maxWidth="120"  />

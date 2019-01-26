@@ -44,8 +44,6 @@ public class ReceiveTask implements Runnable {
             File file = new File(directory.getAbsolutePath() + File.separatorChar + fileName);
             fileOutputStream = new FileOutputStream(file);
 
-            //开始接收文件
-//            LOG.info("======开始接收文件======");
             byte[] bytes = new byte[1024];
             int length = 0;
             while ((length = dataInputStream.read(bytes, 0, bytes.length)) != -1) {

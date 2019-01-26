@@ -25,17 +25,7 @@ public class Main extends Application {
         StartService h = new StartService();
         h.start();
     }
-    //初始化ServerSocket单例，整个系统只存在一个实例
-//    static {
-//            PCSocketServer pcSocketServer = PCSocketServer.getInstance();
-//            System.out.println("static 初始化之后 "+pcSocketServer.toString());
-//        try {
-//            FileServer server = new FileServer();
-//            server.load();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
+
 
     public static void main(String[] args) {
         launch(args);

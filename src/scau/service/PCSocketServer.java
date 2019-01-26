@@ -12,7 +12,7 @@ import java.util.logging.Logger;
  * User: lcwei1
  * Date: 2018/4/11
  * Time: 19:33
- * Description: No Description
+ * Description: 此类并没有使用，可以删除，放在这里只是为了看类是如何使用的
  */
 public class PCSocketServer {
     private static Logger log = Logger.getLogger("PCSocketServer class:");
@@ -33,7 +33,7 @@ public class PCSocketServer {
     private static PCSocketServer pcSocketServer;
     static {
         try {
-            log.info("this is static try");
+            log.info("this is resource try");
             pcSocketServer = new PCSocketServer();
         } catch (IOException e) {
             e.printStackTrace();

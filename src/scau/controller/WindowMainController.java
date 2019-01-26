@@ -8,8 +8,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.MenuBar;
+import javafx.scene.control.Tooltip;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import scau.service.PCSocketServer;
 import scau.utils.InitVideoData;
@@ -28,28 +30,25 @@ import java.util.ResourceBundle;
  * Time: 19:52
  * Description: No Description
  */
-public class WindowMainController implements Initializable{
+public class WindowMainController implements Initializable {
 
     @FXML
     private MenuBar menuBar;
+
+    private Stage stage;
 
     private Path path;
 
     private InitVideoData initVideoData;
 
-    public WindowMainController() {
-//        path = Paths.get("D:/data","tt.txt");
-        new InitVideoData();
-    }
-
-    @FXML
-    public void clickOpen(ActionEvent event) {
-        System.out.println("你点击了open");
-    }
+    private  Tooltip tooltip = new Tooltip();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-       menuBar.setFocusTraversable(true);
+        menuBar.setFocusTraversable(true);
+        tooltip.setText("you can click menubar ");
+        menuBar.setTooltip(tooltip);
+        new InitVideoData();
     }
 
     @FXML
@@ -57,13 +56,28 @@ public class WindowMainController implements Initializable{
         System.out.println("键盘输入！");
     }
 
+
+    @FXML
+    public void clickOpen(ActionEvent event) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Video Resource File");
+        fileChooser.showOpenDialog(stage);
+        System.out.println("你点击了open");
+    }
+
     @FXML
     public void clickSaveAs(ActionEvent event) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("SaveAs Video Resource File");
+        fileChooser.showSaveDialog(stage);
         System.out.println("saveas");
     }
 
     @FXML
     public void clickSave(ActionEvent event) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Video Resource File");
+        fileChooser.showSaveDialog(stage);
         System.out.println("save");
     }
 
@@ -72,8 +86,6 @@ public class WindowMainController implements Initializable{
     public void clickConnect(ActionEvent event) {
 //        自动获取IP地址刷新UI界面
         loadFxmlShowStage("dialog_connection.fxml");
-//        ConnectController d = new ConnectController();
-
     }
 
 
@@ -89,7 +101,7 @@ public class WindowMainController implements Initializable{
     }
 
     @FXML
-    public void clickAbout(ActionEvent event){
+    public void clickAbout(ActionEvent event) {
         loadFxmlShowStage("dialog_aboutMe.fxml");
     }
 
@@ -99,24 +111,10 @@ public class WindowMainController implements Initializable{
         loadFxmlShowStage("tableview_currentTask.fxml");
     }
 
-    /*  打开相关窗口，显示场景 */
-    public void loadFxmlShowStage(String fxmlStr){
-        Stage stage1 = new Stage();
-        Parent root  = null;
-        try {
-            root = FXMLLoader.load(getClass().getClassLoader().getResource("scau/view/"+fxmlStr));
-        } catch (IOException e) {
-            e.printStackTrace();
-    }
-        stage1.setTitle("Start Service");
-        stage1.setResizable(false);
-        stage1.setScene(new Scene( root));
-        stage1.show();
-    }
 
     @FXML
     public void clickReceiveHistory(ActionEvent event) {
-
+        //TODO 加载历史记录，接收的时候保存全部记录到XML文件里面去，然后在根据这个全部文件与现有的视频文件对比，查看哪些是已经删除了的，此方法只需加载
     }
 
     @FXML
@@ -129,6 +127,7 @@ public class WindowMainController implements Initializable{
         }
     }
 
+
     @FXML
     public void clickCheck(ActionEvent event) {
         URI uri = URI.create("http://lcwei.site");
@@ -137,5 +136,20 @@ public class WindowMainController implements Initializable{
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    /*  打开相关窗口，显示场景 */
+    public void loadFxmlShowStage(String fxmlStr) {
+        Stage stage1 = new Stage();
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getClassLoader().getResource("scau/view/" + fxmlStr));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage1.setTitle("Start Service");
+        stage1.setResizable(false);
+        stage1.setScene(new Scene(root));
+        stage1.show();
     }
 }
