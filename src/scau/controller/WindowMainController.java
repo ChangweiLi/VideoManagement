@@ -10,17 +10,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.Tooltip;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import scau.service.PCSocketServer;
-import scau.utils.InitVideoData;
+
+//import scau.utils.InitVideoData;
 
 import java.awt.*;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URL;
-import java.nio.file.Path;
 import java.util.ResourceBundle;
 
 /**
@@ -37,10 +35,6 @@ public class WindowMainController implements Initializable {
 
     private Stage stage;
 
-    private Path path;
-
-    private InitVideoData initVideoData;
-
     private  Tooltip tooltip = new Tooltip();
 
     @Override
@@ -48,7 +42,6 @@ public class WindowMainController implements Initializable {
         menuBar.setFocusTraversable(true);
         tooltip.setText("you can click menubar ");
         menuBar.setTooltip(tooltip);
-        new InitVideoData();
     }
 
     @FXML

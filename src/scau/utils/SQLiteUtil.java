@@ -12,6 +12,7 @@ import java.util.logging.Logger;
  * Date: 2019/1/23
  * Time: 14:56
  * Description: SQLite 数据库操作
+ * Attention: 尚未被使用
  */
 public class SQLiteUtil {
 

@@ -24,7 +24,7 @@
             <Label text="local ip" />
             <Label text="port" GridPane.rowIndex="1" />
             <TextField fx:id="ipTextField" prefHeight="22.0" prefWidth="127.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" editable="false"/>
-            <TextField fx:id="portTextField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+             <TextField fx:id="portTextField" GridPane.columnIndex="1" GridPane.rowIndex="1">8899</TextField>
             <Button mnemonicParsing="false" text="startservice" GridPane.columnIndex="1" GridPane.rowIndex="2" onAction="#clickStartService"/>
          </children>
       </GridPane>

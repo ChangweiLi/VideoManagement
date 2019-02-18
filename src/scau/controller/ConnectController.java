@@ -1,16 +1,12 @@
 package scau.controller;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Dialog;
 import javafx.scene.control.TextField;
-import scau.service.FileServer;
-import scau.service.PCSocketServer;
-import scau.service.StartService;
 
-import java.io.IOException;
+
+
 import java.net.InetAddress;
 import java.net.URL;
 import java.net.UnknownHostException;
@@ -38,8 +34,8 @@ public class ConnectController implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
         try {
             ipTextField.setText(InetAddress.getLocalHost().getHostAddress());
-            portTextField.setText("8899");
-            LOG.info("默认ip为：" +InetAddress.getLocalHost().getHostAddress()+" port为：" + portTextField.getText());
+//            portTextField.setText("8899");
+//            LOG.info("默认ip为：" +InetAddress.getLocalHost().getHostAddress()+" port为：" + portTextField.getText());
         } catch (UnknownHostException e) {
             LOG.info("获取ip地址失败");
             e.printStackTrace();
@@ -50,7 +46,7 @@ public class ConnectController implements Initializable{
     @FXML
     public void clickStartService(ActionEvent event) {
         try {
-            int port = Integer.parseInt(portTextField.getText());
+            int port = Integer.parseInt(portTextField.getText().trim());
         }
         catch(Exception e){
             LOG.warning("端口转换数字失败");
@@ -66,16 +62,18 @@ public class ConnectController implements Initializable{
 
     @FXML
     public  int getPort(){
-        int port = -1;
+        int port = 8899;
         try {
-            port = Integer.parseInt(portTextField.getText());
+//            System.out.println("port = " + portTextField.getText().trim());
+//            int port = Integer.parseInt(portTextField.getText());
             return port;
         }
         catch(Exception e){
             LOG.warning("端口转换数字失败");
             e.printStackTrace();
+            return 0;
         }
-        return port;
+//        return port;
     }
 
 

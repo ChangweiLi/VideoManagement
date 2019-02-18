@@ -28,6 +28,7 @@ public class FileServer extends ServerSocket {
     public void load() {
         while (true) {
             try {
+                LOG.info("开启接受服务，可以接收文件...");
                 Socket socket = this.accept();
                 new Thread(new ReceiveTask(socket)).start();
             } catch (IOException e) {

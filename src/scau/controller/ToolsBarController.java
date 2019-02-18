@@ -10,11 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.InputMethodEvent;
 import javafx.util.StringConverter;
 
-import java.io.DataInputStream;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 import java.util.logging.Logger;
 
 /**
