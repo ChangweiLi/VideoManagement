@@ -3,15 +3,15 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 
-<TableView fx:id="videoInfoTableView" prefHeight="750" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+<TableView fx:id="videoInfoTableView" prefHeight="600" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
            fx:controller="scau.controller.VideoInfoTableViewController">
   <columns>
-      <TableColumn fx:id="tc_name" prefWidth="100.0" text="name" minWidth="100"  maxWidth="120"  />
-      <TableColumn fx:id="tc_author" prefWidth="100.0" text="author"  minWidth="100"  maxWidth="120"/>
-      <TableColumn fx:id="tc_createTime" prefWidth="150.0" text="createTime" minWidth="150"  maxWidth="170"/>
-      <TableColumn fx:id="tc_uploadTime" prefWidth="150.0" text="uploadTime" minWidth="150"  maxWidth="170"/>
-      <TableColumn fx:id="tc_path" prefWidth="200.0" text="path" minWidth="200"  maxWidth="220"/>
-      <TableColumn fx:id="tc_size" prefWidth="100.0" text="size" minWidth="100"  maxWidth="120"/>
-      <TableColumn fx:id="tc_type" prefWidth="100.0" text="type" minWidth="100"  maxWidth="120"/>
+      <TableColumn fx:id="tc_name" prefWidth="100.0" text="name" minWidth="100"  maxWidth="100"  />
+      <TableColumn fx:id="tc_author" prefWidth="100.0" text="author"  minWidth="100"  maxWidth="100"/>
+      <TableColumn fx:id="tc_createTime" prefWidth="100.0" text="createTime" minWidth="100"  maxWidth="100"/>
+      <TableColumn fx:id="tc_uploadTime" prefWidth="100.0" text="uploadTime" minWidth="100"  maxWidth="100"/>
+      <TableColumn fx:id="tc_path" prefWidth="100.0" text="path" minWidth="100"  maxWidth="100"/>
+      <TableColumn fx:id="tc_size" prefWidth="100.0" text="size" minWidth="100"  maxWidth="100"/>
+      <TableColumn fx:id="tc_type" prefWidth="100.0" text="type" minWidth="100"  maxWidth="100"/>
   </columns>
 </TableView>

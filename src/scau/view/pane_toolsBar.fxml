@@ -8,8 +8,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="50.0" maxWidth="1300" minHeight="50.0" minWidth="1300" prefHeight="50.0" prefWidth="1300" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scau.controller.ToolsBarController">
-     <Label layoutX="11.0" layoutY="12.0" text=" name" textAlignment="CENTER">
+<AnchorPane maxHeight="50.0" maxWidth="800" minHeight="50.0" minWidth="800" prefHeight="50.0" prefWidth="800" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scau.controller.ToolsBarController">
+     <Label layoutX="11.0" layoutY="16.0" text=" name" textAlignment="CENTER">
       <font>
          <Font size="13.0" />
       </font>
@@ -17,28 +17,28 @@
          <Insets />
       </opaqueInsets>
    </Label>
-   <TextField fx:id="nameTextField" accessibleRole="TEXT" layoutX="69.0" layoutY="12.0" maxWidth="162.0" minHeight="25.0" minWidth="50.0" opacity="0.95" prefHeight="25.0" prefWidth="162.0" promptText="请输入视频名">
+   <TextField fx:id="nameTextField" accessibleRole="TEXT" layoutX="54.0" layoutY="12.0" maxWidth="162.0" minHeight="25.0" minWidth="50.0" opacity="0.95" prefHeight="25.0" prefWidth="100.0" promptText="请输入视频名">
       <font>
          <Font size="10.0" />
       </font></TextField>
-   <Label layoutX="246.0" layoutY="12.0" text="author" textAlignment="CENTER">
+   <Label layoutX="174.0" layoutY="16.0" text="author" textAlignment="CENTER">
       <font>
          <Font size="13.0" />
       </font>
    </Label>
-   <TextField fx:id="authorTextField" layoutX="300.0" layoutY="12.0" maxWidth="76.0" minHeight="25.0" minWidth="50.0" opacity="0.95" prefHeight="25.0" prefWidth="76.0" promptText="请输入作者">
+   <TextField fx:id="authorTextField" layoutX="219.0" layoutY="12.0" maxWidth="76.0" minHeight="25.0" minWidth="50.0" opacity="0.95" prefHeight="25.0" prefWidth="76.0" promptText="请输入作者">
       <font>
          <Font size="10.0" />
       </font></TextField>
-   <Button fx:id="searchButton" layoutX="935.0" layoutY="11.0" mnemonicParsing="false" onAction="#clickSearch" text="Search" textFill="#322c2c" />
-   <DatePicker fx:id="dp_createTime" layoutX="484.0" layoutY="12.0" promptText="Please click datePicker chioce time" />
-   <Label layoutX="396.0" layoutY="12.0" text="create   time " textAlignment="CENTER">
+   <Button fx:id="searchButton" layoutX="746.0" layoutY="13.0" mnemonicParsing="false" onAction="#clickSearch" text="Search" textFill="#322c2c" />
+   <DatePicker fx:id="dp_createTime" layoutX="390.0" layoutY="12.0" prefHeight="22.0" prefWidth="122.0" promptText="Please click datePicker chioce time" />
+   <Label layoutX="311.0" layoutY="15.0" text="create   time " textAlignment="CENTER">
       <font>
          <Font size="13.0" />
       </font>
    </Label>
-   <DatePicker fx:id="dp_uploadTime" layoutX="742.0" layoutY="11.0" promptText="Please click" />
-   <Label layoutX="652.0" layoutY="12.0" text="upload   time " textAlignment="CENTER">
+   <DatePicker fx:id="dp_uploadTime" layoutX="613.0" layoutY="12.0" prefHeight="22.0" prefWidth="122.0" promptText="Please click" />
+   <Label layoutX="527.0" layoutY="15.0" text="upload   time " textAlignment="CENTER">
       <font>
          <Font size="13.0" />
       </font>

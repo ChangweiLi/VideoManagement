@@ -19,7 +19,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("view/window_main.fxml"));
         primaryStage.setTitle("Video File Management System V 1.0.0");
-        primaryStage.setScene(new Scene(root, 1300, 800));
+        primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.setResizable(false);
         primaryStage.show();
         StartService h = new StartService();
